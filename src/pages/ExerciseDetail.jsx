@@ -23,10 +23,11 @@ const ExerciseDetail = () => {
         `https://youtube-search-and-download.p.rapidapi.com/search?query=${exerciseDetailData.name}`,
         youtubeOptions
       );
-      setExerciseVideos(exerciseVideoData);
+      setExerciseVideos(exerciseVideoData.contents);
     };
 
     fetchExerciseData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   return (
