@@ -1,8 +1,7 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Stack } from '@mui/material';
 
 const ExerciseVideo = ({ exerciseVideos, name }) => {
-  console.log(exerciseVideos);
   return (
     <Box sx={{ mt: { lg: '50px', xs: '20px' } }} p='20px'>
       <Typography variant='h3' mb='33px'>
@@ -12,10 +11,29 @@ const ExerciseVideo = ({ exerciseVideos, name }) => {
         </span>{' '}
         exercise videos
       </Typography>
-      <Stack>
-        <a>
-          <img />
-        </a>
+      <Stack
+        justifyContent='flex-start'
+        flexWrap='wrap'
+        alignItems='center'
+        sx={{ flexDirection: { lg: 'row' }, gap: { lg: '10px', xs: '0' } }}>
+        {exerciseVideos?.slice(0, 6).map((item, index) => (
+          <a
+            href={`https://www.youtube.com/watch?v=${item.video.videoId}`}
+            key={index}
+            className='exercise-video'
+            target='blank'
+            rel='noreferrer'>
+            <img alt={item.video.title} src={item.video.thumbnails[0].url} />
+            <Box>
+              <Typography variant='h5' color='#000'>
+                {item.video.title}
+              </Typography>
+              <Typography variant='h6' color='#000'>
+                {item.video.channelName}
+              </Typography>
+            </Box>
+          </a>
+        ))}
       </Stack>
     </Box>
   );
