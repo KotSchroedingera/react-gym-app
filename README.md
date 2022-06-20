@@ -1,6 +1,6 @@
 # React Gym App
 
-Приложение позволяет найти упражнения для тренировки и посмотреть информацию о нём
+Приложение позволяет найти упражнения для тренировки и посмотреть информацию о нём.  
 https://react-gym-app.vercel.app/
 
 ## Команды
@@ -8,7 +8,8 @@ https://react-gym-app.vercel.app/
 Запуск - npm start  
 Билд = npm build
 
-Переменные: REACT_APP_RAPID_API_KEY - ключ Rapid API
+Переменные:  
+REACT_APP_RAPID_API_KEY - ключ Rapid API
 
 ## Функционал
 
