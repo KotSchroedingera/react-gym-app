@@ -9,7 +9,7 @@ https://react-gym-app.vercel.app/
 ## Команды
 
 Запуск - npm start  
-Билд = npm build
+Билд - npm build
 
 Переменные:  
 REACT_APP_RAPID_API_KEY - ключ Rapid API
